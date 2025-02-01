@@ -1,81 +1,173 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+* {
+   margin: 0%;
+   padding: 0%;
+   box-sizing: border-box;
 }
 
- html{
-    scroll-behavior: smooth;
- }
+html {
+   scroll-behavior: smooth;
+}
 
- .main_container{
-    width: 100%;
-    height: 100vh;
-    background-image: url('./images/bgforback.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
- }
+.main_container {
+   width: 100%;
+   height: 100vh;
+   background-image: url('./images/bgforback.jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+}
 
- .virtual_section{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
- }
+.virtual_section {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
 
- .text_section{
-    width:500px;
-    height: 500px;
-    margin: 30px;
- }
+.text_section {
+   width: 500px;
+   height: 500px;
+   margin: 30px;
+}
 
- .virtual_image{
-    width: 500px;
-    height: 300px;
-    background-image: url('./images/fortextalien.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    opacity: 0.5;
-    border-radius: 30px;
- }
+.virtual_image {
+   width: 500px;
+   height: 300px;
+   background-image: url('./images/fortextalien.jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   opacity: 0.5;
+   border-radius: 30px;
+}
 
- .main_text{
-    width: 500px;
-    height: 60px;
-    margin-top: 10px;
- }
+.main_text {
+   width: 500px;
+   height: 60px;
+   margin-top: 10px;
+}
 
- #text{   
-     text-align: center;
-     font-size:50px;
-     text-transform: capitalize;
-     color: rgb(2, 255, 2);
-     font-weight: 900;
- }
- span{
-    color: rgb(31, 201, 179);
- }
+#text {
+   text-align: center;
+   font-size: 50px;
+   text-transform: capitalize;
+   color: rgb(2, 255, 2);
+   font-weight: 900;
+}
 
- #start_btn{
-    width: 200px;
-    height: 30px;
-    margin-left: 120px;
-    margin-top: 30px;
-    font-size: 15px;
-    text-transform: capitalize;
-    background-color: rgb(107, 255, 1);
-    border: none;
-    border-radius:10px;
-    transition: all 0.5s linear;
- }
+span {
+   color: rgb(31, 201, 179);
+}
 
- #start_btn:hover{
-    background-color: rgb(0, 195, 230);
-    color: white;
- }
+.container-eg-btn-3 {
+   font-family: sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   flex-wrap: wrap;
+   margin: 0 auto 10px;
+   padding: .5em;
+   line-height: normal;
+}
 
- #note{
-    color: red;
-    margin-top: 30px;    
- }
+.container-eg-btn-3 .button {
+   color: #fff;
+   margin: 20px;
+   padding: 12px 15px;
+   text-align: center;
+   text-transform: uppercase;
+   position: relative;
+   transition: .3s;
+   z-index: 1;
+   background: #3aaeff;
+   cursor: pointer;
+   border-radius: 6px;
+}
+
+.container-eg-btn-3 .button-8:before {
+   content: '';
+   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+   position: absolute;
+   top: -2px;
+   left: -2px;
+   background-size: 400%;
+   z-index: -1;
+   filter: blur(5px);
+   width: calc(100% + 4px);
+   height: calc(100% + 4px);
+   animation: glowing 20s linear infinite;
+   opacity: 0;
+   transition: opacity .3s ease-in-out;
+   border-radius: 6px;
+}
+
+.container-eg-btn-3 .button-8:hover:before,
+.container-eg-btn-3 .button-8:hover:after {
+   opacity: 1;
+}
+
+.container-eg-btn-3 .button-8:after {
+   z-index: -1;
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: #111;
+   left: 0;
+   top: 0;
+   border-radius: 6px;
+   opacity: 0;
+}
+
+.container-eg-btn-3 .button-8:active:after {
+   background: transparent;
+}
+
+@keyframes glowing {
+   0% {
+      background-position: 0 0;
+   }
+
+   50% {
+      background-position: 400% 0;
+   }
+
+   100% {
+      background-position: 0 0;
+   }
+}
+
+#note {
+   color: red;
+   margin-top: 30px;
+}
+
+.image_section {
+   width: 500px;
+   height: 100%;
+}
+
+.image_assistant {
+   width: 500px;
+   height: 500px;
+   background-image: url('./images/robot-ai-automation-artificial-intelligence-ai-futuristic_10221-22830.jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   opacity: 0.5;
+   animation: fade-in-normal 1s ease-in 0s normal forwards;
+}
+
+@keyframes fade-in-normal {
+   0% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 0.4;
+   }
+}
+
+.image_assistant:hover: {
+   opacity: 0.5;
+}
